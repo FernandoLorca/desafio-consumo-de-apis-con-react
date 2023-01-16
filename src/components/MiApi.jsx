@@ -41,7 +41,7 @@ const MiApi = ({ searchUser }) => {
     <div className="bg-slate-100 py-5">
       <div className="flex flex-col justify-center items-center">
         <Sort onSort={sortUsers} />
-        <p className="mt-2">Sort users</p>
+        <p className="mt-2">Sort users by username</p>
       </div>
 
       <main className="flex flex-col gap-5 p-5 h-full md:hidden">
