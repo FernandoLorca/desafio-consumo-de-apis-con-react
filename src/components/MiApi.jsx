@@ -38,11 +38,13 @@ const MiApi = ({ searchUser }) => {
   };
 
   return (
-    <>
-      <main className="bg-slate-100 p-5 h-full">
-        <div className="flex justify-center">
-          <Sort onSort={sortUsers} />
-        </div>
+    <div className="bg-slate-100 py-5">
+      <div className="flex flex-col justify-center items-center">
+        <Sort onSort={sortUsers} />
+        <p className="mt-2">Sort users</p>
+      </div>
+
+      <main className="flex flex-col gap-5 p-5 h-full md:hidden">
         {users
           .filter((user) =>
             searchUser.toLowerCase() === ""
@@ -53,7 +55,7 @@ const MiApi = ({ searchUser }) => {
           )
           .map((user, index) => (
             <div
-              className="flex flex-col items-center bg-white p-5 rounded-2xl hover:scale-105 transition-all duration-200 mb-5 md:hidden"
+              className="flex flex-col items-center bg-white p-5 rounded-2xl hover:scale-105 transition-all duration-200 md:hidden"
               key={index}
             >
               <div className="flex flex-col items-center">
@@ -205,7 +207,7 @@ const MiApi = ({ searchUser }) => {
             </div>
           ))}
       </main>
-    </>
+    </div>
   );
 };
 
