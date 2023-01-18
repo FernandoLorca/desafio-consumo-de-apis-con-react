@@ -49,9 +49,11 @@ const MiApi = ({ searchUser }) => {
           .filter((user) =>
             searchUser.toLowerCase() === ""
               ? users
-              : user.username.toLowerCase().includes(searchUser) ||
-                user.name.toLowerCase().includes(searchUser) ||
-                user.email.toLowerCase().includes(searchUser)
+              : user.username
+                  .toLowerCase()
+                  .includes(searchUser.toLowerCase()) ||
+                user.name.toLowerCase().includes(searchUser.toLowerCase()) ||
+                user.email.toLowerCase().includes(searchUser.toLowerCase())
           )
           .map((user, index) => (
             <div
@@ -131,9 +133,11 @@ const MiApi = ({ searchUser }) => {
           .filter((user) =>
             searchUser.toLowerCase() === ""
               ? users
-              : user.username.toLowerCase().includes(searchUser) ||
-                user.name.toLowerCase().includes(searchUser) ||
-                user.email.toLowerCase().includes(searchUser)
+              : user.username
+                  .toLowerCase()
+                  .includes(searchUser.toLowerCase()) ||
+                user.name.toLowerCase().includes(searchUser.toLowerCase()) ||
+                user.email.toLowerCase().includes(searchUser.toLowerCase())
           )
           .map((user, index) => (
             <div
